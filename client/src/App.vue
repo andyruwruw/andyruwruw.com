@@ -2,59 +2,75 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
-      dark
-    >
+      color="transparent"
+      flat>
       <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+        <div id="logo">
+          <span>
+            AY
+          </span>
+        </div>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <p id="title">
+          Andrew Young
+        </p>
       </div>
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn text>
+        Work
+      </v-btn>
+
+      <v-btn text>
+        Portfolio
+      </v-btn>
+
+      <v-btn text>
+        About
       </v-btn>
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
   name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
   data: () => ({
-    //
   }),
 };
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('./components/global/colors.css');
+
+#logo {
+  --size: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--size) * 1px);
+  height: calc(var(--size) * 1px);
+  background: var(--accent);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+#logo span {
+  color: white;
+}
+
+#title {
+  margin: 0;
+  padding: 0 20px;
+  font-family: 'Roboto', sans-serif;
+  transition: all .25s ease-out;
+  font-size: 18px;
+  font-weight: 700;
+}
+</style>

@@ -1,18 +1,28 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <intro />
+
+    <divider :class="$style['intro-divider']"/>
+
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Intro from '@/components/home/Intro.vue';
+import Divider from '@/components/ui/Divider.vue';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    Intro,
+    Divider,
   }
 }
 </script>
+
+<style module>
+.intro-divider {
+  display: block;
+  margin: 100px auto;
+}
+</style>
