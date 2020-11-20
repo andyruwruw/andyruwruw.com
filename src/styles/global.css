@@ -1,0 +1,11 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(#061F3E, #020C17);
+  background-attachment: fixed;
+}
