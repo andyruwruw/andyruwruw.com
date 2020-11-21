@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   createStyles,
   makeStyles,
@@ -119,10 +119,19 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function Skills() {
+interface SkillsProps {
+  index: number,
+  showChange: (index: number, val: boolean) => void,
+}
+
+export default function Skills(props: SkillsProps) {
   const { ref, inView, entry } = useInView({
     threshold: .2,
   });
+
+  useEffect(() => {
+    props.showChange(props.index, inView);
+  }, [inView]);
 
   const classes = useStyles();
 

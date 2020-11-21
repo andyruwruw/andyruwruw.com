@@ -10,6 +10,7 @@ import Education from './components/Education/index';
 import Projects from './components/Projects/index';
 import Work from './components/Work/index';
 import Skills from './components/Skills/index';
+import ScrollGuide from '../../components/ui/scroll-guide/ScrollGuide';
 
 const styles = createStyles({
   root: {
@@ -27,12 +28,31 @@ const styles = createStyles({
   },
 });
 
-class Home extends React.Component<any, any> {
+interface HomeState {
+  shown: boolean[],
+}
+
+interface HomeProps {
+  classes: any,
+}
+
+class Home extends React.Component<HomeProps, HomeState> {
   container: React.RefObject<HTMLDivElement>;
 
   constructor(props: any) {
     super(props);
+
     this.container = React.createRef();
+
+    this.state = {
+      shown: [
+        true,
+        false,
+        false,
+        false,
+        false,
+      ],
+    };
   }
 
   bindScrollSnap() {
@@ -49,23 +69,42 @@ class Home extends React.Component<any, any> {
     this.bindScrollSnap();
   }
 
+  toggleShownHide = (index: number, val: boolean) => {
+    this.setState((state) => {
+      state.shown[index] = val;
+      return state;
+    });
+  }
+
   render() {
     const { classes } = this.props;
 
     return (
       <div className={classes.root}>
+        <ScrollGuide shown={this.state.shown} />
+
         <div
           className={classes.wrapper}
           ref={this.container}>
-          <Intro />
+          <Intro
+            index={0}
+            showChange={this.toggleShownHide} />
 
-          <Work />
+          <Work
+            index={1}
+            showChange={this.toggleShownHide} />
     
-          <Projects />
+          <Projects
+            index={2}
+            showChange={this.toggleShownHide} />
     
-          <Education />
+          <Education
+            index={3}
+            showChange={this.toggleShownHide} />
 
-          <Skills />
+          <Skills
+            index={4}
+            showChange={this.toggleShownHide} />
         </div>
       </div>
     );

@@ -5,8 +5,6 @@ import {
 } from '@material-ui/core/styles';
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
-
-const SPARKLES = true;
   
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

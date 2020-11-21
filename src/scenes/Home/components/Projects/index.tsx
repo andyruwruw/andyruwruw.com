@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   createStyles,
   makeStyles,
@@ -120,10 +120,19 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function Intro() {
+interface ProjectProps {
+  index: number,
+  showChange: (index: number, val: boolean) => void,
+}
+
+export default function Projects(props: ProjectProps) {
   const { ref, inView, entry } = useInView({
     threshold: .2,
   });
+
+  useEffect(() => {
+    props.showChange(props.index, inView);
+  }, [inView]);
 
   const classes = useStyles();
 
@@ -141,7 +150,7 @@ export default function Intro() {
             <Divider />
 
             <h2 className={classes.subTitle}>
-              i endevor on a lot of
+              i endeavor on a lot of
             </h2>
 
             <h2 className={classes.subTitleSecond}>
