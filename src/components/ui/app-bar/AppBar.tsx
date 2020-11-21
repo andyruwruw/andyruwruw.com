@@ -65,21 +65,27 @@ function AppBar() {
           </Link>
 
           <div className={classes.iconWrapper}>
-            <a href="https://www.linkedin.com/in/andrew-young-3322b3133/">
+            <a
+              href="https://www.linkedin.com/in/andrew-young-3322b3133/"
+              target="_blank">
               <img
                 className={classes.icon}
                 src={LinkedInIcon}
                 alt="andrew-young-3322b3133"/>
             </a>
 
-            <a href="https://github.com/andyruwruw">
+            <a
+              href="https://github.com/andyruwruw"
+              target="_blank">
               <img
                 className={classes.icon}
                 src={GithubIcon}
                 alt="andyruwruw"/>
             </a>
 
-            <a href="https://open.spotify.com/user/12146574234?si=Fec6rYDRSwWxQs07zS892Q">
+            <a
+              href="https://open.spotify.com/user/12146574234?si=Fec6rYDRSwWxQs07zS892Q"
+              target="_blank">
               <img
                 className={classes.icon}
                 src={SpotifyIcon}

@@ -70,6 +70,9 @@ const useStyles = makeStyles((theme: Theme) =>
     bar: {
       animation: 'hide .4s, slide-backwards-zn30 .6s ease .4s',
     },
+    barInside: {
+      animation: 'hide .4s, slide-backwards-zn30 .6s ease .4s, stretchx-zn30 5s linear 1s infinite',
+    },
   }),
 );
 
@@ -220,6 +223,12 @@ export default function WorkGraphic() {
           <path className={classes.white} d="M2229.32,1193.59q-15.09,0-23.87,12.9t-8.81,36.2q0,23,8.67,36t24.29,13q15.39,0,23.68-13.1t8.28-36.42c0-15-2.83-26.82-8.52-35.57S2239.45,1193.59,2229.32,1193.59Zm8.34,73.25q-2.6,6.93-8.34,6.93-6,0-8.66-7t-2.72-23.11q0-19.19,2.72-25.66c1.79-4.29,4.65-6.47,8.53-6.47s6.79,2.2,8.5,6.61,2.58,11.93,2.58,22.58C2240.27,1253.5,2239.39,1262.19,2237.66,1266.84Z" transform="translate(-150.13 -254.85)"/>
           
           <path className={classes.white} d="M2146.36,1193.59q-15.06,0-23.85,12.9t-8.8,36.2q0,23,8.66,36t24.27,13q15.42,0,23.71-13.1t8.28-36.42c0-15-2.84-26.82-8.53-35.57S2156.51,1193.59,2146.36,1193.59Zm8.36,73.25q-2.59,6.93-8.36,6.93-5.94,0-8.66-7t-2.7-23.11q0-19.19,2.7-25.66c1.81-4.29,4.64-6.47,8.52-6.47s6.83,2.2,8.53,6.61,2.59,11.93,2.59,22.58C2157.34,1253.5,2156.46,1262.19,2154.72,1266.84Z" transform="translate(-150.13 -254.85)"/>
+        </g>
+      </svg>
+
+      <svg className={[classes.svg, classes.behind, classes.bar, classes.barInside].join(' ')} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2699.73 2490.29">
+        <g id="bar-inside">
+          <rect className={classes.white} x="1500.91" y="949.82" width="341.62" height="73.66"/>
         </g>
       </svg>
     </Tilt>

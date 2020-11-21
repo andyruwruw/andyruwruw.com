@@ -7,7 +7,7 @@ import {
 import { useInView } from 'react-intersection-observer';
 
 import Divider from '../../../../components/ui/divider/Divider';
-import IntroGraphic from '../../../../assets/graphics/Intro';
+import SkillsGraphic from '../../../../assets/graphics/Skills';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -119,7 +119,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function Intro() {
+export default function Skills() {
   const { ref, inView, entry } = useInView({
     threshold: .2,
   });
@@ -134,24 +134,24 @@ export default function Intro() {
         {inView &&
           <div className={classes.content}>
             <h1 className={classes.title}>
-              ANDREW YOUNG
+              My Skills
             </h1>
 
             <Divider />
 
             <h2 className={classes.subTitle}>
-              fullstack developer /
+              Here's what I can do!
             </h2>
 
-            <h2 className={classes.subTitleSecond}>
-              undergrad student.
-            </h2>
+            <button>
+              See Skills
+            </button>
           </div>
         }
 
         <div className={classes.graphicWrapper}>
           {inView &&
-            <IntroGraphic />
+            <SkillsGraphic />
           }
         </div>
       </div>

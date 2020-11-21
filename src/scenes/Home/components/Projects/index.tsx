@@ -4,8 +4,11 @@ import {
   makeStyles,
   Theme,
 } from '@material-ui/core/styles';
+import { useInView } from 'react-intersection-observer';
+import Button from '@material-ui/core/Button';
 
 import Divider from '../../../../components/ui/divider/Divider';
+import PortfolioGraphic from '../../../../assets/graphics/Portfolio';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -16,81 +19,145 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '100vh',
       scrollSnapAlign: 'center',
     },
+    title: {
+      animation: 'hide .2s, enter-left .2s ease .2s',
+      [theme.breakpoints.between('xs', 625)]: {
+        fontSize: '6rem',
+      },
+      [theme.breakpoints.between(625, 990)]: {
+        fontSize: '8rem',
+      },
+      [theme.breakpoints.between(990, 1600)]: {
+        fontSize: '10rem',
+      },
+      [theme.breakpoints.between(1600, 'xl')]: {
+        fontSize: '12rem',
+      },
+    },
+    subTitle: {
+      animation: 'hide .4s, enter-left .3s ease .4s',
+      [theme.breakpoints.between('xs', 625)]: {
+        fontSize: '2rem',
+      },
+      [theme.breakpoints.between(625, 'md')]: {
+        fontSize: '2.4rem',
+      },
+      [theme.breakpoints.between('md', 'xl')]: {
+        fontSize: '2.8rem',
+      },
+    },
+    subTitleSecond: {
+      animation: 'hide .5s, enter-left .3s ease .5s',
+      [theme.breakpoints.between('xs', 625)]: {
+        fontSize: '2rem',
+      },
+      [theme.breakpoints.between(625, 'md')]: {
+        fontSize: '2.4rem',
+      },
+      [theme.breakpoints.between('md', 'xl')]: {
+        fontSize: '2.8rem',
+      },
+    },
     wrapper: {
       display: 'flex',
       justifyContent: 'center',
       width: '90%',
       maxWidth: '150rem',
-      [theme.breakpoints.between('xs', 'sm')]: {
+      [theme.breakpoints.between('xs', 'lg')]: {
+        justifyContent: 'flex-end',
         flexDirection: 'column-reverse',
       },
-      [theme.breakpoints.between('sm', 'md')]: {
-        flexDirection: 'row',
-      },
-      [theme.breakpoints.between('md', 'xl')]: {
+      [theme.breakpoints.between('lg', 'xl')]: {
         flexDirection: 'row',
       },
     },
     content: {
-      [theme.breakpoints.between('xs', 'md')]: {
+      [theme.breakpoints.between('xs', 625)]: {
         width: '100%',
+        marginTop: 'calc(100vw * .7)',
+        maxWidth: '90rem',
       },
-      [theme.breakpoints.between('md', 'xl')]: {
-        width: '40%'
+      [theme.breakpoints.between(625, 900)]: {
+        width: '100%',
+        marginTop: 'calc(100vw * .5)',
+        maxWidth: '90rem',
+      },
+      [theme.breakpoints.between(900, 'lg')]: {
+        width: '100%',
+        marginTop: 'calc(100vw * .35)',
+        maxWidth: '90rem',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+        width: '40%',
+        marginTop: '0px',
       },
       alignSelf: 'center',
     },
     graphicWrapper: {
-      alignSelf: 'flex-start',
       display: 'block',
       position: 'relative',
-      [theme.breakpoints.between('xs', 'md')]: {
-        marginTop: '0',
-        width: '100%',
+      [theme.breakpoints.between('xs', 625)]: {
+        alignSelf: 'center',
+        width: '75%',
+        marginTop: '6rem',
       },
-      [theme.breakpoints.between('md', 'xl')]: {
+      [theme.breakpoints.between(625, 900)]: {
+        alignSelf: 'center',
+        width: '60%',
+        marginTop: '4rem',
+      },
+      [theme.breakpoints.between(900, 'lg')]: {
+        alignSelf: 'center',
+        width: '40%',
+        marginTop: '4rem',
+      },
+      [theme.breakpoints.between('lg', 'xl')]: {
+        alignSelf: 'flex-start',
         marginTop: 'calc((100vh - 55%) / 2)',
         width: '55%',
       },
-    },
-    graphicImage: {
-      width: '100%',
-      position: 'absolute',
-    },
-    hands: {
-      animation: 'hide .5s, enter-right .4s ease .5s',
-    },
-    front: {
-      animation: 'hide .3s, enter-right .4s ease .3s',
-    },
-    fill: {
-      animation: 'hide .6s, enter-right .4s ease .6s',
-    },
-    back: {
-      animation: 'hide .1s, enter-right .4s ease .1s',
     },
   }),
 );
 
 export default function Intro() {
+  const { ref, inView, entry } = useInView({
+    threshold: .2,
+  });
+
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div
+      ref={ref}
+      className={classes.root}>
       <div className={classes.wrapper}>
-        <div className={classes.content}>
-          <h1>
-            My Portfolio
-          </h1>
+        {inView &&
+          <div className={classes.content}>
+            <h1 className={classes.title}>
+              My Portfolio
+            </h1>
 
-          <Divider />
+            <Divider />
 
-          <h2>
-            vue.js fanboy
-          </h2>
-        </div>
+            <h2 className={classes.subTitle}>
+              i endevor on a lot of
+            </h2>
+
+            <h2 className={classes.subTitleSecond}>
+              passion projects.
+            </h2>
+
+            <button>
+              See Projects
+            </button>
+          </div>
+        }
 
         <div className={classes.graphicWrapper}>
+          {inView &&
+            <PortfolioGraphic />
+          }
         </div>
       </div>
     </div>

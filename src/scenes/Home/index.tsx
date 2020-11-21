@@ -9,7 +9,7 @@ import Intro from './components/Intro/index';
 import Education from './components/Education/index';
 import Projects from './components/Projects/index';
 import Work from './components/Work/index';
-
+import Skills from './components/Skills/index';
 
 const styles = createStyles({
   root: {
@@ -64,6 +64,8 @@ class Home extends React.Component<any, any> {
           <Projects />
     
           <Education />
+
+          <Skills />
         </div>
       </div>
     );
