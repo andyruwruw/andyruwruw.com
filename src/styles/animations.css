@@ -18,6 +18,88 @@
   }
 }
 
+@keyframes enter-forwards {
+  from {
+    transform: translateZ(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enter-up {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enter-left-z30 {
+  from {
+    transform: translateZ(30px) translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(30px) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enter-left-zn30 {
+  from {
+    transform: translateZ(-30px) translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(-30px) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enter-right-zn30 {
+  from {
+    transform: translateZ(-30px) translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(-30px) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotatez {
+  from {
+    transform: translateZ(0px) rotate(0deg);
+  }
+  to {
+    transform: translateZ(0px) rotate(360deg);
+  }
+}
+
+@keyframes rotatez-full-z30 {
+  from {
+    transform: translateZ(30px) rotate(0deg);
+  }
+  to {
+    transform: translateZ(30px) rotate(360deg);
+  }
+}
+
+@keyframes rotatez-zn30 {
+  from {
+    transform: translateZ(-30px) rotate(0deg);
+  }
+  to {
+    transform: translateZ(-30px) rotate(360deg);
+  }
+}
+
 @keyframes enter-right {
   from {
     transform: translateX(100px);
@@ -173,6 +255,39 @@
   }
   to {
     transform: translateZ(-30px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-forwards-zn10 {
+  from {
+    transform: translateZ(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(-10px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-forwards-z10 {
+  from {
+    transform: translateZ(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(10px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-forwards-z20 {
+  from {
+    transform: translateZ(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(20px);
     opacity: 1;
   }
 }
@@ -421,6 +536,18 @@
   }
 }
 
+@keyframes hoverz-forwards-z20 {
+  0% {
+    transform: translateZ(20px);
+  }
+  50% {
+    transform: translateZ(30px);
+  }
+  100% {
+    transform: translateZ(20px);
+  }
+}
+
 @keyframes flash-25 {
   0% {
     opacity: 0;
@@ -454,6 +581,18 @@
   }
   100% {
     transform: translateZ(30px);
+  }
+}
+
+@keyframes hoverz-forwards-z10 {
+  0% {
+    transform: translateZ(10px);
+  }
+  50% {
+    transform: translateZ(20px);
+  }
+  100% {
+    transform: translateZ(10px);
   }
 }
 

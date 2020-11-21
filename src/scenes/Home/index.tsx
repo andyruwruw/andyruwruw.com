@@ -6,11 +6,13 @@ import {
 import ScrollSnap from 'scroll-snap';
 
 import Intro from './components/Intro/index';
-import Education from './components/Education/index';
-import Projects from './components/Projects/index';
 import Work from './components/Work/index';
+import Projects from './components/Projects/index';
+import Education from './components/Education/index';
 import Skills from './components/Skills/index';
+import Contact from './components/Contact/index';
 import ScrollGuide from '../../components/ui/scroll-guide/ScrollGuide';
+
 
 const styles = createStyles({
   root: {
@@ -47,6 +49,7 @@ class Home extends React.Component<HomeProps, HomeState> {
     this.state = {
       shown: [
         true,
+        false,
         false,
         false,
         false,
@@ -104,6 +107,10 @@ class Home extends React.Component<HomeProps, HomeState> {
 
           <Skills
             index={4}
+            showChange={this.toggleShownHide} />
+
+          <Contact
+            index={5}
             showChange={this.toggleShownHide} />
         </div>
       </div>
