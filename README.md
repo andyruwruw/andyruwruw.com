@@ -2,7 +2,7 @@
 
 Portfolio site for professional purposes.
 
-Available at [andyruwruw.com](https://andyruwruw.com/) and [andrewdanielyoung.com](http://andrewdanielyoung.com/).
+Available at [andyruwruw.com](https://andyruwruw.com/).
 
 # How it's Made
 
