@@ -125,7 +125,7 @@ interface IntroProps {
 }
 
 export default function Intro(props: IntroProps) {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: .2,
   });
 

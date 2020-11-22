@@ -6,10 +6,6 @@ import {
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
 
-const HANDS = true;
-const RADIAL = true;
-const BAR = true;
-
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     parallax: {

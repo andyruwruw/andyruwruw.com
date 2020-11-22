@@ -116,6 +116,9 @@ const useStyles = makeStyles((theme: Theme) =>
         width: '55%',
       },
     },
+    button: {
+      animation: 'hide .3s, enter-left .2s ease .3s',
+    },
   }),
 );
 
@@ -125,7 +128,7 @@ interface WorkProps {
 }
 
 export default function Work(props: WorkProps) {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: .2,
   });
 
@@ -154,8 +157,14 @@ export default function Work(props: WorkProps) {
               web development teacher's assistant
             </h2>
 
-            <button>
-              See More
+            <button className={classes.button}>
+              <a
+                className="link"
+                href="https://www.linkedin.com/in/andrew-young-3322b3133/#experience-section"
+                target="_blank"
+                rel="noreferrer">
+                See More
+              </a>
             </button>
           </div>
         }

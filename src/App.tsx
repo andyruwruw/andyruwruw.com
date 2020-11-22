@@ -7,6 +7,7 @@ import {
 
 import AppBar from './components/ui/app-bar/AppBar';
 import Home from './scenes/Home/index';
+import Projects from './scenes/Projects/index';
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
         <AppBar />
 
         <Switch>
+            <Route path="/Projects">
+              <Projects />
+            </Route>
+
             <Route path="/">
               <Home />
             </Route>

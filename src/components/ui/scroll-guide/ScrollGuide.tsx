@@ -40,10 +40,6 @@ interface ScrollGuideProps {
 }
 
 class ScrollGuide extends React.Component<ScrollGuideProps, any> {
-  constructor(props: any) {
-    super(props);
-  }
-
   render() {
     const { classes } = this.props;
 

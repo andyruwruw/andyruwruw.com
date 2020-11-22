@@ -116,6 +116,9 @@ const useStyles = makeStyles((theme: Theme) =>
         width: '55%',
       },
     },
+    button: {
+      animation: 'hide .3s, enter-left .2s ease .3s',
+    },
   }),
 );
 
@@ -125,7 +128,7 @@ interface SkillsProps {
 }
 
 export default function Skills(props: SkillsProps) {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: .2,
   });
 
@@ -149,11 +152,11 @@ export default function Skills(props: SkillsProps) {
             <Divider />
 
             <h2 className={classes.subTitle}>
-              Here's what I can do!
+              here's what I can do!
             </h2>
 
-            <button>
-              See Skills
+            <button className={classes.button}>
+              See Skills (Coming Soon)
             </button>
           </div>
         }

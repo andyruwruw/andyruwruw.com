@@ -117,6 +117,9 @@ const useStyles = makeStyles((theme: Theme) =>
         width: '55%',
       },
     },
+    button: {
+      animation: 'hide .3s, enter-left .2s ease .3s',
+    },
   }),
 );
 
@@ -126,7 +129,7 @@ interface ProjectProps {
 }
 
 export default function Projects(props: ProjectProps) {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: .2,
   });
 
@@ -157,8 +160,14 @@ export default function Projects(props: ProjectProps) {
               passion projects.
             </h2>
 
-            <button>
-              See Projects
+            <button className={classes.button}>
+              <a
+                className="link"
+                href="https://github.com/andyruwruw?tab=repositories"
+                target="_blank"
+                rel="noreferrer">
+                See Projects
+              </a>
             </button>
           </div>
         }

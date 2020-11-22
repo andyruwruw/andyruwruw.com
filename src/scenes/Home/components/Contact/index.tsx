@@ -125,7 +125,7 @@ interface EducationProps {
 }
 
 export default function Education(props: EducationProps) {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: .2,
   });
 
