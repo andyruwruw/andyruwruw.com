@@ -8,9 +8,7 @@ Available at [andyruwruw.com](https://andyruwruw.com/).
 
 ### Framework
 
-This project was made using [React](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/). While most of my projects are in Vue.js, I figured I'd make this site using React!
-
-(Vue is still better)
+This project was made using [React](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/). While most of my projects are in Vue.js, I figured I'd make this site using React.
 
 ### Graphics
 
