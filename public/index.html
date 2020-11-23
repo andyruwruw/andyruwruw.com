@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Portfolio site for Andrew Young"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <title>Andrew Young</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>Andrew Daniel Young</title>
+    <audio id="click">
+      <source src="./audio/click.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="load">
+      <source src="./audio/load.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="back">
+      <source src="./audio/back.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="hover">
+      <source src="./audio/hover.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="high">
+      <source src="./audio/high.mp3" type="audio/mpeg">
+    </audio>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+  <body id="body">
+    <noscript>
+      <strong>We're sorry but andrewdanielyoung.com doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
   </body>
 </html>
