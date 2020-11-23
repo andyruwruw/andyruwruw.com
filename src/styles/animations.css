@@ -78,7 +78,7 @@
     transform: translateZ(0px) rotate(0deg);
   }
   to {
-    transform: translateZ(0px) rotate(360deg);
+    transform: translateZ(0px) rotate(-360deg);
   }
 }
 
