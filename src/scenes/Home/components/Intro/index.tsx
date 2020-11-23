@@ -110,7 +110,12 @@ const useStyles = makeStyles((theme: Theme) =>
         width: '40%',
         marginTop: '4rem',
       },
-      [theme.breakpoints.between('lg', 'xl')]: {
+      [theme.breakpoints.between('lg', 2000)]: {
+        alignSelf: 'flex-start',
+        marginTop: 'calc((100vh - 45%) / 2)',
+        width: '45%',
+      },
+      [theme.breakpoints.between(2000, 'xl')]: {
         alignSelf: 'flex-start',
         marginTop: 'calc((100vh - 55%) / 2)',
         width: '55%',
