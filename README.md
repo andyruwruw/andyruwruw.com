@@ -1,29 +1,33 @@
-# home-page2
+<h1 align="center">andyruwruw.com Legacy V2</h1>
 
-## Project setup
-```
-npm install
-```
+<p align="center">
+  Live: <a href="https://v2.andyruwruw.com">v2.andyruwruw.com</a>
+</p>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+<p align="center">
+  Created: October 2019
+</p>
 
-### Compiles and minifies for production
-```
-npm run build
-```
+<p align="center">
+  <img width="400px" src="https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/legacy-v2/documentation/landing.PNG" />
+</p>
 
-### Run your tests
-```
-npm run test
-```
+<p align="center">
+  <img width="400px" src="https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/legacy-v2/documentation/portfolio.PNG" />
+</p>
 
-### Lints and fixes files
-```
-npm run lint
-```
+<p align="center">
+  <img width="400px" src="https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/legacy-v2/documentation/skills.PNG" />
+</p>
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<p align="center">
+  <img width="400px" src="https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/legacy-v2/documentation/skill.PNG" />
+</p>
+
+<p align="center">
+  <img width="400px" src="https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/legacy-v2/documentation/experience.PNG" />
+</p>
+
+<p align="center">
+  <img width="400px" src="https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/legacy-v2/documentation/contact.PNG" />
+</p>
