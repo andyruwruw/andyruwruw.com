@@ -1,11 +1,21 @@
-# andyruwruw.com Legacy V1
+<h1 align="center">andyruwruw.com Legacy V1</h1>
 
-Live: [v1.andyruwruw.com](https://v1.andyruwruw.com)
+<p align="center">
+  Live: <a href="https://v1.andyruwruw.com">v1.andyruwruw.com</a>
+</p>
 
-Created: May 2019
+<p align="center">
+  Created: May 2019
+</p>
 
-<img align="center" width="200px" src="https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/legacy-v1/documentation/landing.PNG" />
+<p align="center">
+  <img width="400px" src="https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/legacy-v1/documentation/landing.PNG" />
+</p>
 
-<img align="center" width="200px" src="https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/legacy-v1/documentation/projects.PNG" />
+<p align="center">
+  <img width="400px" src="https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/legacy-v1/documentation/projects.PNG" />
+</p>
 
-<img align="center" width="200px" src="https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/legacy-v1/documentation/resume.PNG" />
+<p align="center">
+  <img width="400px" src="https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/legacy-v1/documentation/resume.PNG" />
+</p>
