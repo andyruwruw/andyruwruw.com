@@ -9,3 +9,7 @@ header.MuiPaper-elevation4.MuiPaper-root {
 li.MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root {
     font-size: 1.4rem !important;
 }
+
+.MuiAppBar-positionFixed {
+    right: 5px !important;
+}

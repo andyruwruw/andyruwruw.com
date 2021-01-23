@@ -14,8 +14,10 @@ class ScrollGuide extends React.Component<ScrollGuideProps, any> {
 
     return (
       <div className={classes.root}>
-        {this.props.shown.map((val) => (
-          <span className={[classes.bar, val ? classes.active : ''].join(' ')} />
+        {this.props.shown.map((val, index) => (
+          <span
+            key={`scroll-guide-${index}`}
+            className={[classes.bar, val ? classes.active : ''].join(' ')} />
         ))}
       </div>
     )

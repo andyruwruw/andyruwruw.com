@@ -17,3 +17,27 @@ button {
   padding: 1rem 2rem;
   border-radius: .5rem;
 }
+
+.MuiAppBar-colorTransparent {
+  background-image: linear-gradient(#061f3eFA, #051D3AFA) !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255);
+}

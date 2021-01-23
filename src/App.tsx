@@ -23,6 +23,27 @@ function App() {
             main: '#ff4d5a',
           },
         },
+        overrides: {
+          MuiCssBaseline: {
+            '@global': {
+              '*': {
+                'scroll-bar-width': 'thin',
+              },
+              '*::-webkit-scrollbar': {
+                width: '5px',
+              },
+              '*::-webkit-scrollbar-track': {
+                background: 'transparent',
+              },
+              '*::-webkit-scrollbar-thumb': {
+                background: 'white',
+              },
+              '*::-webkit-scrollbar-thumb:hover': {
+                background: 'white',
+              },
+            },
+          }
+        }
       }),
     [prefersDarkMode],
   );
