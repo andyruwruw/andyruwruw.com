@@ -1,3 +1,11 @@
 header.MuiPaper-elevation4.MuiPaper-root {
     box-shadow: none !important;
 }
+
+.MuiPaper-root:not(.MuiAppBar-root) {
+    background-color: #020C17 !important;
+}
+
+li.MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root {
+    font-size: 1.4rem !important;
+}

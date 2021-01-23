@@ -13,35 +13,18 @@ import Skills from './components/Skills/index';
 import Contact from './components/Contact/index';
 import ScrollGuide from '../../components/ui/scroll-guide/ScrollGuide';
 
-
-const styles = createStyles({
-  root: {
-    display: 'block',
-    width: '100vw',
-    height: '100vh',
-  },
-  wrapper: {
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
-    overflow: 'auto',
-    overflowX: 'hidden',
-    height: '100%',
-  },
-});
-
 interface HomeState {
   shown: boolean[],
 }
 
 interface HomeProps {
-  classes: any,
+  classes: Classes,
 }
 
 class Home extends React.Component<HomeProps, HomeState> {
   container: React.RefObject<HTMLDivElement>;
 
-  constructor(props: any) {
+  constructor(props: HomeProps) {
     super(props);
 
     this.container = React.createRef();
@@ -58,6 +41,9 @@ class Home extends React.Component<HomeProps, HomeState> {
     };
   }
 
+  /**
+   * Instantiate scroll-snap
+   */
   bindScrollSnap() {
     const element = this.container.current;
     const snapObject = new ScrollSnap(element, {
@@ -68,10 +54,12 @@ class Home extends React.Component<HomeProps, HomeState> {
     snapObject.bind();
   }
 
-  componentDidMount() {
-    this.bindScrollSnap();
-  }
-
+  /**
+   * 
+   * 
+   * @param {number} index Index of component
+   * @param {boolean} val State of component
+   */
   toggleShownHide = (index: number, val: boolean) => {
     this.setState((state) => {
       state.shown[index] = val;
@@ -79,15 +67,17 @@ class Home extends React.Component<HomeProps, HomeState> {
     });
   }
 
-  render() {
-    const { classes } = this.props;
+  componentDidMount() {
+    this.bindScrollSnap();
+  }
 
+  render() {
     return (
-      <div className={classes.root}>
+      <div className={this.props.classes.root}>
         <ScrollGuide shown={this.state.shown} />
 
         <div
-          className={classes.wrapper}
+          className={this.props.classes.wrapper}
           ref={this.container}>
           <Intro
             index={0}
@@ -117,5 +107,21 @@ class Home extends React.Component<HomeProps, HomeState> {
     );
   }
 }
+
+const styles = createStyles({
+  root: {
+    display: 'block',
+    height: '100vh',
+    width: '100vw',
+  },
+  wrapper: {
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%',
+    overflow: 'auto',
+    overflowX: 'hidden',
+  },
+});
 
 export default withStyles(styles)(Home);

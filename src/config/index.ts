@@ -1,6 +1,20 @@
-export const EXPERIENCE = [
+export interface IJob {
+  title: string,
+  company: string,
+  location: string,
+  start: number,
+  end: number,
+  description: string[],
+  achievements: string[],
+  topics: string[],
+  type: string,
+  link?: string,
+}
+
+export const jobs = [
   {
-    title: 'Frontend Developer',
+    title: 'Frontend Developer Intern',
+    link: 'https://www.chess.com/',
     company: 'Chess.com',
     location: 'Los Altos, CA',
     start: 1585724400000,
@@ -19,8 +33,9 @@ export const EXPERIENCE = [
     type: 'Internship',
   },
   {
-    title: 'Teachers Assistant',
-    company: 'Web Development',
+    title: 'Web Development Teachers Assistant',
+    company: 'BYU CS 260',
+    link: 'https://catalog.byu.edu/physical-and-mathematical-sciences/computer-science/web-programming',
     location: 'Brigham Young University, UT',
     start: 1567321200000,
     end: 1585724400000,
@@ -41,7 +56,8 @@ export const EXPERIENCE = [
   },
   {
     title: 'Coding Instructor',
-    company: 'STEM4KIDS',
+    company: 'STEM4Kids',
+    link: 'https://www.activityhero.com/biz/68289-stem4kids-san-jose-ca',
     location: 'Cupertino, CA',
     start: 1556694000000,
     end: 1564642800000,
@@ -59,6 +75,7 @@ export const EXPERIENCE = [
   {
     title: 'Music Studio Lead',
     company: 'Steve & Kate\'s Camp',
+    link: 'https://steveandkatescamp.com/',
     location: 'San Jose, CA',
     start: 1525158000000,
     end: 1533106800000,
@@ -76,6 +93,7 @@ export const EXPERIENCE = [
   {
     title: 'Temporary Human Resources Assistant',
     company: 'RTW Management',
+    link: 'http://www.rtwmanagement.com/home.html',
     location: 'Los ALtos, CA',
     start: 1525158000000,
     end: 1525158000000,
@@ -85,12 +103,15 @@ export const EXPERIENCE = [
     achievements: [
       'Found and hired 30 drivers in New York licensed for paratransit transit.',
     ],
-    topics: [],
+    topics: [
+      'Human Resources',
+    ],
     type: 'Temp',
   },
   {
     title: 'Music Studio Lead',
     company: 'Steve & Kate\'s Camp',
+    link: 'https://steveandkatescamp.com/',
     location: 'Cupertino, CA',
     start: 1493622000000,
     end: 1501570800000,
@@ -108,6 +129,7 @@ export const EXPERIENCE = [
   {
     title: 'Executive Producer of Media',
     company: 'California YMCA Youth & Government',
+    link: 'https://www.calymca.org/',
     location: 'Sacramento, CA',
     start: 1483257600000,
     end: 1498892400000,
@@ -118,23 +140,23 @@ export const EXPERIENCE = [
     achievements: [],
     topics: [
       'Media',
-      'Leadership',
     ],
     type: 'Highschool',
   },
   {
     title: 'Head of Media',
     company: 'The Talon (High School Newspaper)',
+    link: 'https://lahstalon.org/',
     location: 'Los Altos, CA',
     start: 1459494000000,
     end: 1496300400000,
     description: [
       'Managed videographers, photographers and graphic artists to work along side writers.',
+      'Gatekeeper of quality control and consistancy.',
     ],
     achievements: [],
     topics: [
       'Media',
-      'Leadership',
     ],
     type: 'Highschool',
   },
@@ -390,4 +412,19 @@ export const SKILLS = [
       'Coding',
     ],
   },
+];
+
+export const months = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
 ];

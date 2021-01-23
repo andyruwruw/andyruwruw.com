@@ -6,6 +6,7 @@ h1 {
   font-weight: 400;
   margin: 0;
   font-family: 'Josefin Sans', sans-serif;
+  max-width: calc(100vw - 4rem);
 }
 
 h2 {
@@ -40,4 +41,23 @@ button {
 .link {
   color: white;
   text-decoration: none;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 3rem;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  max-width: calc(100vw - 4rem);
+}
+
+.MuiFormLabel-root {
+  font-size: 16px !important;
+}
+
+.MuiSelect-select.MuiSelect-select {
+  font-size: 1.4rem;
 }
