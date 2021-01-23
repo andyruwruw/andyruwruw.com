@@ -25,10 +25,12 @@ export default function Experience() {
   types.sort();
 
   let filteredJobs: IJob[];
-  if (type === 'All') {
+  if (topic !== 'All') {
     filteredJobs = jobs.filter((job) => job.topics.includes(topic));
-  } else {
+  } else if (type !== 'All') {
     filteredJobs = jobs.filter((job) => job.type === type);
+  } else {
+    filteredJobs = jobs;
   }
 
   const [reload, setReload] = React.useState(false);
