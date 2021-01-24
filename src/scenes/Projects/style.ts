@@ -52,16 +52,16 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       animation: 'hide .2s, enter-left .2s ease .2s',
       [theme.breakpoints.between('xs', 625)]: {
-        fontSize: '4rem',
+        fontSize: '2rem',
       },
       [theme.breakpoints.between(625, 990)]: {
-        fontSize: '6rem',
+        fontSize: '4rem',
       },
       [theme.breakpoints.between(990, 1600)]: {
-        fontSize: '6rem',
+        fontSize: '4rem',
       },
       [theme.breakpoints.between(1600, 'xl')]: {
-        fontSize: '8rem',
+        fontSize: '4rem',
       },
     },
     formControl: {
@@ -77,6 +77,12 @@ const useStyles = makeStyles((theme: Theme) =>
       flexWrap: 'wrap',
       display: 'flex',
       alignItems: 'center',
+    },
+    projectWrapper: {
+      display: 'flex',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
     },
   }));
 

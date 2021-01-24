@@ -11,55 +11,11 @@ import useStyles from './style';
 export default function Projects() {
   const classes = useStyles();
 
-  const [topic, setTopic] = React.useState('All');
-  const [tool, setTool] = React.useState('All');
+  const reactProjects = projects.filter((project) => project.tools.includes('React.js') && project.end );
 
-  const topics = Array.from(new Set(projects.map( (project) => project.topics ).flat(1)));
-  topics.push('All');
-  topics.sort();
+  const vueProjects = projects.filter((project) => project.tools.includes('Vue.js') && project.end );
 
-  const tools = Array.from(new Set(projects.map( (project) => project.tools ).flat(1)));
-  tools.push('All');
-  tools.sort();
-
-  let filteredProjects: IProject[];
-  if (topic !== 'All') {
-    filteredProjects = projects.filter((project) => project.topics.includes(topic));
-  } else if (tool !== 'All') {
-    filteredProjects = projects.filter((project) => project.tools.includes(tool));
-  } else {
-    filteredProjects = projects;
-  }
-
-  const [reload, setReload] = React.useState(false);
-
-  const handleTopicChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setReload(true);
-
-    setTopic(event.target.value as string);
-    setTool('All');
-
-    setTimeout(() => {
-      setReload(false);
-    }, 10);
-  };
-
-  const handleToolChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setReload(true);
-
-    setTopic('All');
-    setTool(event.target.value as string);
-
-    setTimeout(() => {
-      setReload(false);
-    }, 10);
-  };
-
-  const reactProjects = projects.filter((project) => project.tools.includes('React.js'));
-
-  const vueProjects = projects.filter((project) => project.tools.includes('Vue.js'));
-
-  const npmProjects = projects.filter((project) => project.tools.includes('npm'));
+  const npmProjects = projects.filter((project) => project.topics.includes('npm') && project.end );
 
   const notFinished = projects.filter((project) => project.end === 0);
 
@@ -75,7 +31,16 @@ export default function Projects() {
         </Link>
       </Tooltip>
 
-      <h1 className={classes.title}>
+      <div className={classes.projectWrapper}>
+        {projects.map((project, index) => (
+          <Project
+            key={project.title}
+            project={project}
+            index={index} />
+        ))}
+      </div>
+
+      {/* <h1 className={classes.title}>
         React Projects
       </h1>
 
@@ -117,7 +82,7 @@ export default function Projects() {
           key={project.title}
           project={project}
           index={index} />
-      ))}
+      ))} */}
     </div>
   );
 }
