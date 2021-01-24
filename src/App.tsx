@@ -59,7 +59,7 @@ function App() {
                 <Experience />
               </Route>
 
-              <Route path="/Projects">
+              <Route path="/projects">
                 <Projects />
               </Route>
 

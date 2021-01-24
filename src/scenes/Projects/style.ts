@@ -64,13 +64,6 @@ const useStyles = makeStyles((theme: Theme) =>
         fontSize: '8rem',
       },
     },
-    jobList: {
-      display: 'flex',
-      alignItems: 'top',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-      marginTop: '3rem',
-    },
     formControl: {
       animation: 'hide .2s, enter-left .2s ease .2s',
       margin: theme.spacing(1),

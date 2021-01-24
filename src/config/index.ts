@@ -162,13 +162,25 @@ export const jobs = [
   },
 ];
 
-export const PORTFOLIO = [
+export interface IProject {
+  title: string,
+  url: string,
+  github: string,
+  description: Array<string>
+  image: string,
+  topics: Array<string>
+  tools: Array<string>
+  start: number,
+  end: Number,
+}
+
+export const projects: IProject[] = [
   {
     title: 'Portfolio Site',
     url: 'https://andyruwruw.com',
     github: 'https://github.com/andyruwruw/andyruwruw.com',
-    description: '',
-    image: null,
+    description: [],
+    image: 'portfolio_site',
     topics: [
     ],
     tools: [
@@ -182,8 +194,10 @@ export const PORTFOLIO = [
     title: 'enhanced-spotify-api',
     url: 'https://enhancedspotifyapi.com/',
     github: 'https://github.com/andyruwruw/enhanced-spotify-api',
-    description: 'Object oriented Spotify API wrapper, providing developers with prototype classes for each of Spotify\'s data objects. So far reaching 1.9k installs!',
-    image: 'https://raw.githubusercontent.com/andyruwruw/enhanced-spotify-api/master/documentation/markdown/logo.svg?sanitize=true',
+    description: [
+      'Object oriented Spotify API wrapper, providing developers with prototype classes for each of Spotify\'s data objects. So far reaching 1.9k installs!',
+    ],
+    image: 'enhanced_spotify_api',
     topics: [
       'Spotify',
       'npm',
@@ -199,8 +213,8 @@ export const PORTFOLIO = [
     title: 'chess-web-api',
     url: 'https://www.npmjs.com/package/chess-web-api',
     github: 'https://github.com/andyruwruw/chess-web-api',
-    description: '',
-    image: 'https://raw.githubusercontent.com/andyruwruw/chess-web-api/master/documentation/logo.png',
+    description: [],
+    image: 'chess_web_api',
     topics: [
       'Chess',
       'npm',
@@ -216,8 +230,10 @@ export const PORTFOLIO = [
     title: 'Boid Boogie',
     url: 'https://boidboogie.com/',
     github: 'https://github.com/andyruwruw/boid-boogie',
-    description: 'Flocking simulation utilizing Spotify\'s Web Playback SDK and API to dynamically move the boids with the user\'s music.',
-    images: 'https://raw.githubusercontent.com/andyruwruw/boid-boogie/master/src/assets/logo.svg',
+    description: [
+      'Flocking simulation utilizing Spotify\'s Web Playback SDK and API to dynamically move the boids with the user\'s music.',
+    ],
+    image: 'boid_boogie',
     topics: [
       'Spotify',
       'Flocking Simulation',
@@ -236,10 +252,11 @@ export const PORTFOLIO = [
     title: 'Countdown Timer',
     url: 'https://countdown-timer-app.vercel.app/',
     github: 'https://github.com/andyruwruw/countdown-timer',
-    description: '',
+    description: [],
     topics: [
       'Productivity',
     ],
+    image: 'countdown_timer',
     tools: [
       'Vue.js',
       'Google API',
@@ -253,8 +270,8 @@ export const PORTFOLIO = [
     title: 'chess-image-generator',
     url: 'https://www.npmjs.com/package/chess-image-generator',
     github: 'https://github.com/andyruwruw/chess-image-generator',
-    description: '',
-    image: 'https://raw.githubusercontent.com/andyruwruw/chess-image-generator/master/documentation/logo.png',
+    description: [],
+    image: 'chess_image_generator',
     topics: [
       'Chess',
       'npm',
@@ -267,12 +284,12 @@ export const PORTFOLIO = [
     title: 'Github Profile README.md',
     url: 'https://github.com/andyruwruw',
     github: 'https://github.com/andyruwruw/andyruwruw',
-    description: '',
+    description: [],
     topics: [
       'Spotify',
       'Chess',
     ],
-    image: 'https://img.icons8.com/ios-filled/256/000000/github.png',
+    image: 'andyruwruw_github_profile',
     tools: [
       'React.js',
       'Serverless',
@@ -282,13 +299,23 @@ export const PORTFOLIO = [
     start: 0,
     end: 0,
   },
-];
-
-export const SAMPLE_CLASSWORK = [
   {
-    title: '',
-    url: '',
-    date: '',
+    title: 'Blackmailer',
+    url: 'https://blackmailer.xyz',
+    github: 'https://github.com/cyficowley/blackmail',
+    description: [],
+    topics: [
+      'Firebase',
+      'Chess',
+    ],
+    image: 'blackmailer',
+    tools: [
+      'Firebase',
+      'Vue.js',
+      'Vuetify',
+    ],
+    start: 0,
+    end: 0,
   },
 ];
 
