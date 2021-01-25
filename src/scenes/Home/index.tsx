@@ -4,6 +4,8 @@ import {
   withStyles,
 } from '@material-ui/core/styles';
 import ScrollSnap from 'scroll-snap';
+import { withRouter } from "react-router";
+import { RouteComponentProps } from 'react-router';
 
 import Intro from './components/Intro/index';
 import Work from './components/Work/index';
@@ -17,8 +19,20 @@ interface HomeState {
   shown: boolean[],
 }
 
-interface HomeProps {
+interface MatchParams {
+  name: string,
+}
+
+interface HomeProps extends RouteComponentProps<MatchParams> {
   classes: Classes,
+  match: any,
+  location: any,
+  history: any,
+}
+
+export interface SectionProps {
+  index: number,
+  showChange: (index: number, val: boolean) => void,
 }
 
 class Home extends React.Component<HomeProps, HomeState> {
@@ -30,14 +44,9 @@ class Home extends React.Component<HomeProps, HomeState> {
     this.container = React.createRef();
 
     this.state = {
-      shown: [
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-      ],
+      shown: new Array(6)
+        .fill(false)
+        .map((val, index) => index === 0 ? true : false),
     };
   }
 
@@ -55,8 +64,6 @@ class Home extends React.Component<HomeProps, HomeState> {
   }
 
   /**
-   * 
-   * 
    * @param {number} index Index of component
    * @param {boolean} val State of component
    */
@@ -124,4 +131,4 @@ const styles = createStyles({
   },
 });
 
-export default withStyles(styles)(Home);
+export default withStyles(styles)(withRouter(Home));

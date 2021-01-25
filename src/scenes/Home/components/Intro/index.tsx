@@ -3,15 +3,11 @@ import { useInView } from 'react-intersection-observer';
 
 import Divider from '../../../../components/ui/divider/Divider';
 import IntroGraphic from '../../../../assets/graphics/Intro';
+import { SectionProps } from '../../index';
 
 import useStyles from './style';
 
-interface IntroProps {
-  index: number,
-  showChange: (index: number, val: boolean) => void,
-}
-
-export default function Intro(props: IntroProps) {
+export default function Intro(props: SectionProps) {
   const { ref, inView } = useInView({
     threshold: .2,
   });

@@ -3,21 +3,18 @@ import { useInView } from 'react-intersection-observer';
 
 import Divider from '../../../../components/ui/divider/Divider';
 import SkillsGraphic from '../../../../assets/graphics/Skills';
+import { SectionProps } from '../../index';
 
 import useStyles from './style';
 
-interface SkillsProps {
-  index: number,
-  showChange: (index: number, val: boolean) => void,
-}
-
-export default function Skills(props: SkillsProps) {
+export default function Skills(props: SectionProps) {
+  const { index, showChange } = props;
   const { ref, inView } = useInView({
     threshold: .2,
   });
 
   useEffect(() => {
-    props.showChange(props.index, inView);
+    showChange(index, inView);
   }, [inView]);
 
   const classes = useStyles();

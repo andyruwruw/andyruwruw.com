@@ -4,15 +4,11 @@ import { Link } from "react-router-dom";
 
 import Divider from '../../../../components/ui/divider/Divider';
 import WorkGraphic from '../../../../assets/graphics/Work';
+import { SectionProps } from '../../index';
 
 import useStyles from './style';
 
-interface WorkProps {
-  index: number,
-  showChange: (index: number, val: boolean) => void,
-}
-
-export default function Work(props: WorkProps) {
+export default function Work(props: SectionProps) {
   const { ref, inView } = useInView({
     threshold: .2,
   });
@@ -24,7 +20,9 @@ export default function Work(props: WorkProps) {
   const classes = useStyles();
 
   return (
-    <div ref={ref} className={classes.root}>
+    <div
+      ref={ref}
+      className={classes.root}>
       <div className={classes.wrapper}>
         {inView &&
           <div className={classes.content}>
@@ -51,7 +49,6 @@ export default function Work(props: WorkProps) {
             </button>
           </div>
         }
-
         <div className={classes.graphicWrapper}>
           {inView &&
             <WorkGraphic />

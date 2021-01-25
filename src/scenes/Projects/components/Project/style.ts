@@ -7,6 +7,17 @@ import {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      marginTop: '0',
+    },
+    title: {
+      display: 'block',
+      margin: '0 auto',
+      color: 'white',
+      textAlign: 'center',
+      fontSize: '2rem',
+      fontFamily: '\'Ubuntu\', sans-serif',
+    },
+    wrapper: {
       width: '30rem',
       height: '30rem',
       margin: '1rem',
@@ -17,6 +28,31 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       boxShadow: '4px 4px 4px #00000044',
+      overflow: 'hidden',
+      transition: 'background-size .3s ease',
+      '&:hover': {
+        backgroundSize: 'auto 115%',
+      },
+    },
+    button: {
+      marginTop: '1.5rem',
+      fontSize: '1.5rem',
+      animation: 'hide .3s, enter-left .2s ease .3s',
+    },
+    content: {
+      opacity: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%',
+      height: '100%',
+      background: '#000000B0',
+      transition: 'opacity .3s ease',
+      cursor: 'pointer',
+      '&:hover': {
+        opacity: '100%',
+      },
     },
   }),
 );

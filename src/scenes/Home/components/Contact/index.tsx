@@ -3,14 +3,11 @@ import { useInView } from 'react-intersection-observer';
 
 import Divider from '../../../../components/ui/divider/Divider';
 import ContactGraphic from '../../../../assets/graphics/Contact';
+import { SectionProps } from '../../index';
+
 import useStyles from './style';
 
-interface EducationProps {
-  index: number,
-  showChange: (index: number, val: boolean) => void,
-}
-
-export default function Education(props: EducationProps) {
+export default function Education(props: SectionProps) {
   const { ref, inView } = useInView({
     threshold: .2,
   });

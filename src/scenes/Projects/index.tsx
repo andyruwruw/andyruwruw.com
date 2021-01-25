@@ -5,19 +5,24 @@ import { Link } from "react-router-dom";
 import { projects, IProject } from '../../config/index';
 import BackIcon from '../../assets/icons/back.svg';
 import Project from './components/Project/Project';
+import ProjectDialoge from './components/ProjectDialoge/ProjectDialoge';
 
 import useStyles from './style';
 
 export default function Projects() {
   const classes = useStyles();
 
-  const reactProjects = projects.filter((project) => project.tools.includes('React.js') && project.end );
+  const [project, setProject] = React.useState<IProject | null>(null);
+  const [open, setOpen] = React.useState<boolean>(false);
 
-  const vueProjects = projects.filter((project) => project.tools.includes('Vue.js') && project.end );
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-  const npmProjects = projects.filter((project) => project.topics.includes('npm') && project.end );
-
-  const notFinished = projects.filter((project) => project.end === 0);
+  function handleClick(value: IProject) {
+    setOpen(true);
+    setProject(value);
+  }
 
   return (
     <div className={classes.root}>
@@ -31,58 +36,28 @@ export default function Projects() {
         </Link>
       </Tooltip>
 
+      <div className={classes.headerWrapper}>
+        <h1 className={classes.title}>
+          Projects
+        </h1>
+      </div>
+
+      <span className={classes.mainDivider} />
+
       <div className={classes.projectWrapper}>
         {projects.map((project, index) => (
           <Project
             key={project.title}
             project={project}
-            index={index} />
+            index={index}
+            handleClick={handleClick} />
         ))}
       </div>
 
-      {/* <h1 className={classes.title}>
-        React Projects
-      </h1>
-
-      {reactProjects.map((project, index) => (
-        <Project
-          key={project.title}
-          project={project}
-          index={index} />
-      ))}
-
-      <h1 className={classes.title}>
-        Vue.js Projects
-      </h1>
-
-      {vueProjects.map((project, index) => (
-        <Project
-          key={project.title}
-          project={project}
-          index={index} />
-      ))}
-
-      <h1 className={classes.title}>
-        NPM Packages
-      </h1>
-
-      {npmProjects.map((project, index) => (
-        <Project
-          key={project.title}
-          project={project}
-          index={index} />
-      ))}
-
-      <h1 className={classes.title}>
-        In Progress
-      </h1>
-
-      {notFinished.map((project, index) => (
-        <Project
-          key={project.title}
-          project={project}
-          index={index} />
-      ))} */}
+      <ProjectDialoge
+        open={open}
+        project={project}
+        handleClose={handleClose}/>
     </div>
   );
 }

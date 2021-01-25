@@ -52,16 +52,16 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       animation: 'hide .2s, enter-left .2s ease .2s',
       [theme.breakpoints.between('xs', 625)]: {
-        fontSize: '2rem',
+        fontSize: '4rem',
       },
       [theme.breakpoints.between(625, 990)]: {
-        fontSize: '4rem',
+        fontSize: '6rem',
       },
       [theme.breakpoints.between(990, 1600)]: {
-        fontSize: '4rem',
+        fontSize: '6rem',
       },
       [theme.breakpoints.between(1600, 'xl')]: {
-        fontSize: '4rem',
+        fontSize: '8rem',
       },
     },
     formControl: {
@@ -83,6 +83,7 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       flexWrap: 'wrap',
       justifyContent: 'center',
+      marginBottom: '2rem',
     },
   }));
 
