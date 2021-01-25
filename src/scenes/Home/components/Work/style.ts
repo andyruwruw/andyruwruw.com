@@ -118,6 +118,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     button: {
       animation: 'hide .3s, enter-left .2s ease .3s',
+      marginTop: '2rem',
     },
   }),
 );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
@@ -7,8 +7,9 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
+import axios from 'axios';
 
-import { IProject } from '../../../../config/index';
+import { IProject, projects } from '../../../../config/index';
 
 import useStyles from './styles';
 
@@ -67,6 +68,7 @@ const DialogTitle = withStyles(styles)((props: DialogTitleProps) => {
 const DialogContent = withStyles((theme: Theme) => ({
   root: {
     padding: theme.spacing(3),
+    paddingBottom: theme.spacing(5),
   },
 }))(MuiDialogContent);
 
@@ -84,11 +86,29 @@ interface ProjectDialogeProps {
 }
 
 export default function ProjectDialoge(props: ProjectDialogeProps) {
+  const [downloads, setDownloads] = useState(-1);
+  const [npmName, setNpmName] = useState('');
+
+  useEffect(() => {
+    console.log('testing')
+    if (props.project?.npm && props.project?.npm !== npmName && downloads === -1) {
+      console.log('running')
+      getDownloads(props.project?.npm);
+    }
+  }, []);
+
   const classes = useStyles();
 
   const contentStyle: React.CSSProperties = {
     backgroundImage: `url('https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/master/src/assets/samples/${props.project?.image}.png')`,
   };
+
+  const getDownloads = async (name: string) => {
+    console.log('getting')
+    const { data } = await axios.get(`https://api.npmjs.org/downloads/point/1970-01-01:2038-01-19/${name}`);
+    setDownloads(data.downloads);
+    setNpmName(name);
+  }
   
   return (
     <div>
@@ -107,12 +127,19 @@ export default function ProjectDialoge(props: ProjectDialogeProps) {
         </DialogTitle>
 
         <DialogContent dividers>
-          
-          {props.project?.description.map((paragraph) => (
-            <p className={classes.description}>
+          {props.project?.description.map((paragraph, index) => (
+            <p
+              key={`${props.project?.title}-desc-${index}`}
+              className={classes.description}>
               { paragraph }
             </p>
           ))}
+
+          {downloads !== -1 && props.project?.npm === npmName &&
+            <p className={[classes.description, classes.bold].join(' ')}>
+              Downloaded { downloads.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") } times.
+            </p>
+          }
 
           {props.project?.topics.length !== 0 &&
             <div>
@@ -121,9 +148,10 @@ export default function ProjectDialoge(props: ProjectDialogeProps) {
               </p>
 
               <div className={classes.toolsWrapper}>
-                {props.project?.topics.map((topics) => (
+                {props.project?.topics.sort().map((topics) => (
                   <Chip
-                    size="small"
+                    key={`${props.project?.title}-topic-${topics}`}
+                    size="medium"
                     color="primary"
                     label={topics}/>
                 ))}
@@ -138,9 +166,10 @@ export default function ProjectDialoge(props: ProjectDialogeProps) {
               </p>
 
               <div className={classes.toolsWrapper}>
-                {props.project?.tools.map((tool) => (
+                {props.project?.tools.sort().map((tool) => (
                   <Chip
-                    size="small"
+                    key={`${props.project?.title}-tool-${tool}`}
+                    size="medium"
                     color="primary"
                     label={tool}/>
                 ))}

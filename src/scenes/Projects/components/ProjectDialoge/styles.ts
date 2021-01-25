@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: '1.8rem',
     },
     button: {
-      fontSize: '1.4rem',
-      padding: '.7rem 1.7rem',
+      fontSize: '1.6rem',
+      padding: '.8rem 1.7rem',
       minWidth: '10rem',
       marginLeft: '2rem !important',
       transition: 'background .2s ease',
@@ -23,10 +23,14 @@ const useStyles = makeStyles((theme: Theme) =>
         background: '#ffffff22',
       },
     },
+    bold: {
+      fontWeight: 500,
+      color: '#ff828b',
+    },
     image: {
       width: '100%',
       minWidth: '568px',
-      height: '20rem',
+      height: '25rem',
       backgroundSize: '101% auto',
       backgroundPosition: 'center center',
     },

@@ -172,6 +172,7 @@ export interface IProject {
   tools: Array<string>
   start: number,
   end: Number,
+  npm: string | null,
 }
 
 export const projects: IProject[] = [
@@ -194,6 +195,7 @@ export const projects: IProject[] = [
     ],
     start: 1595833200000,
     end: 1606118400000,
+    npm: null,
   },
   {
     title: 'Boid Boogie',
@@ -218,6 +220,7 @@ export const projects: IProject[] = [
     ],
     start: 1596006000000,
     end: 1596783600000,
+    npm: null,
   },
   {
     title: 'Github Profile README.md',
@@ -241,6 +244,7 @@ export const projects: IProject[] = [
     ],
     start: 1595660400000,
     end: 1596006000000,
+    npm: null,
   },
   {
     title: 'enhanced-spotify-api',
@@ -262,6 +266,7 @@ export const projects: IProject[] = [
     ],
     start: 1584774000000,
     end: 1585724400000,
+    npm: 'enhanced-spotify-api',
   },
   {
     title: 'chess-web-api',
@@ -282,6 +287,7 @@ export const projects: IProject[] = [
     ],
     start: 1581062400000,
     end: 1581235200000,
+    npm: 'chess-web-api',
   },
   {
     title: 'chess-image-generator',
@@ -299,6 +305,7 @@ export const projects: IProject[] = [
     tools: [],
     start: 1581062400000,
     end: 1581235200000,
+    npm: 'chess-image-generator',
   },
   {
     title: 'Blackmailer',
@@ -320,6 +327,7 @@ export const projects: IProject[] = [
     ],
     start: 1591686000000,
     end: 0,
+    npm: null,
   },
   {
     title: 'Countdown Timer',
@@ -342,6 +350,7 @@ export const projects: IProject[] = [
     ],
     start: 1566630000000,
     end: 1567839600000,
+    npm: null,
   },
 ];
 

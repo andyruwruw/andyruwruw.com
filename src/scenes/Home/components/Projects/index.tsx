@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 
 import Divider from '../../../../components/ui/divider/Divider';
 import PortfolioGraphic from '../../../../assets/graphics/Portfolio';
@@ -40,13 +41,11 @@ export default function Projects(props: SectionProps) {
             </h2>
 
             <button className={classes.button}>
-              <a
+              <Link
                 className="link"
-                href="https://github.com/andyruwruw?tab=repositories"
-                target="_blank"
-                rel="noreferrer">
-                See Projects
-              </a>
+                to="/projects">
+                See More
+              </Link>
             </button>
           </div>
         }

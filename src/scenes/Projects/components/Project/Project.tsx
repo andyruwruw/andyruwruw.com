@@ -14,13 +14,14 @@ interface ProjectProps {
 export default function Project(props: ProjectProps) {
   const classes = useStyles();
 
-  const contentStyle: React.CSSProperties = {
-    backgroundImage: `url('https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/master/src/assets/images/${props.project.image}.png')`,
-  };
-
   function openDetails() {
     props.handleClick(props.project);
   }
+
+  let contentStyle = {
+    '--index': props.index,
+    backgroundImage: `url('https://raw.githubusercontent.com/andyruwruw/andyruwruw.com/master/src/assets/images/${props.project.image}.png')`,
+  } as React.CSSProperties;
 
   return (
     <div

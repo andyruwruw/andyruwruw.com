@@ -18,6 +18,8 @@ const useStyles = makeStyles((theme: Theme) =>
       fontFamily: '\'Ubuntu\', sans-serif',
     },
     wrapper: {
+      '--index': 0,
+      animation: 'hide calc((var(--index) * .1s) + .2s), enter-left .2s ease calc((var(--index) * .1s) + .2s)',
       width: '30rem',
       height: '30rem',
       margin: '1rem',

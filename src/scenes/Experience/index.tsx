@@ -61,15 +61,13 @@ export default function Experience() {
 
   return (
     <div className={classes.root}>
-      <Tooltip title="Back Home">
-        <Link
-          className={classes.back}
-          to="/">
-          <img
-            className={classes.backIcon}
-            src={BackIcon}/>
-        </Link>
-      </Tooltip>
+      <Link
+        className={classes.back}
+        to="/">
+        <img
+          className={classes.backIcon}
+          src={BackIcon}/>
+      </Link>
 
       <div className={classes.headerWrapper}>
         <h1 className={classes.title}>
