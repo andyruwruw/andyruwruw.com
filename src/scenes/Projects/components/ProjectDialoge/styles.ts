@@ -25,8 +25,24 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     image: {
       width: '100%',
+      minWidth: '568px',
       height: '20rem',
-      backgroundSize: 'auto 100%',
+      backgroundSize: '101% auto',
+      backgroundPosition: 'center center',
+    },
+    subheader: {
+      fontSize: '1.8rem',
+      color: '#ffffff60',
+      textTransform: 'uppercase',
+      fontWeight: 500,
+      margin: '1rem .5rem .5rem',
+    },
+    toolsWrapper: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      '& > *': {
+        margin: theme.spacing(0.5),
+      },
     },
     link: {
       color: '#ffffff',

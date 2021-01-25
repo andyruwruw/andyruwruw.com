@@ -179,23 +179,77 @@ export const projects: IProject[] = [
     title: 'Portfolio Site',
     url: 'https://andyruwruw.com',
     github: 'https://github.com/andyruwruw/andyruwruw.com',
-    description: [],
+    description: [
+      'Portfolio site, built with React.js and Typescript to show proficiency, as well as visually showcase examples of work.',
+      'Most of my work is done in Vue.js, and so a project like this is a great opporunity to use React.',
+      '90% of the visual appeal comes from some very fancy illustrations animated to appear 3D.'
+    ],
     image: 'portfolio_site',
     topics: [
     ],
     tools: [
       'React.js',
       'Typescript',
+      'Material UI'
     ],
     start: 1595833200000,
     end: 1606118400000,
+  },
+  {
+    title: 'Boid Boogie',
+    url: 'https://boidboogie.com/',
+    github: 'https://github.com/andyruwruw/boid-boogie',
+    description: [
+      'Flocking simulation that dynamically moves the boids with the user\'s music.',
+      'Utilizing Spotify\'s Web Playback SDK and API to retrieve playback point and music audio analaysis',
+      'Inspired by https://www.kaleidosync.com/visualizer',
+    ],
+    image: 'boid_boogie',
+    topics: [
+      'Spotify',
+      'Flocking Simulation',
+    ],
+    tools: [
+      'Vue.js',
+      'Spotify API',
+      'Spotify Playback SDK',
+      'P5.js',
+      'Vercel Serverless',
+    ],
+    start: 1596006000000,
+    end: 1596783600000,
+  },
+  {
+    title: 'Github Profile README.md',
+    url: 'https://github.com/andyruwruw',
+    github: 'https://github.com/andyruwruw/andyruwruw',
+    description: [
+      'Dynamic Github profile README.md that uses a Vercel serverless backend to render React.js components based on API results.',
+      'The README.md always displays my current Spotify playback, top tracks, and current chess.com games',
+      'Inspired by natemoo-re.',
+    ],
+    topics: [
+      'Spotify',
+      'chess.com',
+    ],
+    image: 'andyruwruw_github_profile',
+    tools: [
+      'React.js',
+      'Vercel Serverless',
+      'Spotify API',
+      'Chess.com API',
+    ],
+    start: 1595660400000,
+    end: 1596006000000,
   },
   {
     title: 'enhanced-spotify-api',
     url: 'https://enhancedspotifyapi.com/',
     github: 'https://github.com/andyruwruw/enhanced-spotify-api',
     description: [
-      'Object oriented Spotify API wrapper, providing developers with prototype classes for each of Spotify\'s data objects. So far reaching 1.9k installs!',
+      'Object oriented Spotify API wrapper, providing developers with prototype classes for each of Spotify\'s data objects.',
+      'Lazy loading of data, minimal requests, and all of Spotify\'s API in some nifty classes with customization available',
+      'By far my most downloaded npm package.',
     ],
     image: 'enhanced_spotify_api',
     topics: [
@@ -213,10 +267,13 @@ export const projects: IProject[] = [
     title: 'chess-web-api',
     url: 'https://www.npmjs.com/package/chess-web-api',
     github: 'https://github.com/andyruwruw/chess-web-api',
-    description: [],
+    description: [
+      'A lightweight unoffical wrapper for the Chess.com public data API.',
+      'Featured on Chess.com\'s official API documentation, and recieves maintenance from myself and the community.',
+    ],
     image: 'chess_web_api',
     topics: [
-      'Chess',
+      'chess.com',
       'npm',
     ],
     tools: [
@@ -227,53 +284,16 @@ export const projects: IProject[] = [
     end: 1581235200000,
   },
   {
-    title: 'Boid Boogie',
-    url: 'https://boidboogie.com/',
-    github: 'https://github.com/andyruwruw/boid-boogie',
-    description: [
-      'Flocking simulation utilizing Spotify\'s Web Playback SDK and API to dynamically move the boids with the user\'s music.',
-    ],
-    image: 'boid_boogie',
-    topics: [
-      'Spotify',
-      'Flocking Simulation',
-    ],
-    tools: [
-      'Vue.js',
-      'Spotify API',
-      'Spotify Playback SDK',
-      'P5.js',
-      'Serverless',
-    ],
-    start: 1596006000000,
-    end: 1596783600000,
-  },
-  {
-    title: 'Countdown Timer',
-    url: 'https://countdown-timer-app.vercel.app/',
-    github: 'https://github.com/andyruwruw/countdown-timer',
-    description: [],
-    topics: [
-      'Productivity',
-    ],
-    image: 'countdown_timer',
-    tools: [
-      'Vue.js',
-      'Google API',
-      'P5.js',
-      'Serverless',
-    ],
-    start: 1566630000000,
-    end: 1567839600000,
-  },
-  {
     title: 'chess-image-generator',
     url: 'https://www.npmjs.com/package/chess-image-generator',
     github: 'https://github.com/andyruwruw/chess-image-generator',
-    description: [],
+    description: [
+      'Generates PNG file or buffer based on commonly used chess position notations.',
+      'Probably my most boring package, but recieved a bit more attention after an article was written about it!',
+    ],
     image: 'chess_image_generator',
     topics: [
-      'Chess',
+      'chess',
       'npm',
     ],
     tools: [],
@@ -281,32 +301,16 @@ export const projects: IProject[] = [
     end: 1581235200000,
   },
   {
-    title: 'Github Profile README.md',
-    url: 'https://github.com/andyruwruw',
-    github: 'https://github.com/andyruwruw/andyruwruw',
-    description: [],
-    topics: [
-      'Spotify',
-      'Chess',
-    ],
-    image: 'andyruwruw_github_profile',
-    tools: [
-      'React.js',
-      'Serverless',
-      'Spotify API',
-      'Chess.com API',
-    ],
-    start: 1595660400000,
-    end: 1596006000000,
-  },
-  {
     title: 'Blackmailer',
     url: 'https://blackmailer.xyz',
     github: 'https://github.com/cyficowley/blackmail',
-    description: [],
+    description: [
+      'Allows users to blackmail themselves into completing goals.',
+      'Describe your goal, upload blackmail, and the email of the worst person it could be sent to.',
+      'Submit proof of completion before your self set deadline, or get blackmailed.',
+    ],
     topics: [
-      'Firebase',
-      'Chess',
+      'Gimmick',
     ],
     image: 'blackmailer',
     tools: [
@@ -316,6 +320,28 @@ export const projects: IProject[] = [
     ],
     start: 1591686000000,
     end: 0,
+  },
+  {
+    title: 'Countdown Timer',
+    url: 'https://countdown-timer-app.vercel.app/',
+    github: 'https://github.com/andyruwruw/countdown-timer',
+    description: [
+      'Minimalist timer displaying the time remaining you have until your next Google calendar event or until a current event expires.',
+      'An older project, but one I still use to this day.',
+    ],
+    topics: [
+      'Productivity',
+    ],
+    image: 'countdown_timer',
+    tools: [
+      'Vue.js',
+      'Google API',
+      'P5.js',
+      'Vercel Serverless',
+      'Vuetify',
+    ],
+    start: 1566630000000,
+    end: 1567839600000,
   },
 ];
 

@@ -13,3 +13,7 @@ li.MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root {
 .MuiAppBar-positionFixed {
     right: 5px !important;
 }
+
+span.MuiChip-label.MuiChip-labelSmall {
+    font-size: 1.2rem;
+}

@@ -6,6 +6,7 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
+import Chip from '@material-ui/core/Chip';
 
 import { IProject } from '../../../../config/index';
 
@@ -65,14 +66,14 @@ const DialogTitle = withStyles(styles)((props: DialogTitleProps) => {
 
 const DialogContent = withStyles((theme: Theme) => ({
   root: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(3),
   },
 }))(MuiDialogContent);
 
 const DialogActions = withStyles((theme: Theme) => ({
   root: {
     margin: 0,
-    padding: theme.spacing(1),
+    padding: theme.spacing(2),
   },
 }))(MuiDialogActions);
 
@@ -95,6 +96,10 @@ export default function ProjectDialoge(props: ProjectDialogeProps) {
         open={props.open && props.project !== null}
         onClose={props.handleClose}
         aria-labelledby="customized-dialog-title">
+        <div
+          className={classes.image}
+          style={contentStyle}/>
+
         <DialogTitle
           id="customized-dialog-title"
           onClose={props.handleClose}>
@@ -102,14 +107,46 @@ export default function ProjectDialoge(props: ProjectDialogeProps) {
         </DialogTitle>
 
         <DialogContent dividers>
-          <div
-            className={classes.image}
-            style={contentStyle}/>
+          
           {props.project?.description.map((paragraph) => (
             <p className={classes.description}>
               { paragraph }
             </p>
           ))}
+
+          {props.project?.topics.length !== 0 &&
+            <div>
+              <p className={classes.subheader}>
+                Topics
+              </p>
+
+              <div className={classes.toolsWrapper}>
+                {props.project?.topics.map((topics) => (
+                  <Chip
+                    size="small"
+                    color="primary"
+                    label={topics}/>
+                ))}
+              </div>
+            </div>
+          }
+
+          {props.project?.tools.length !== 0 &&
+            <div>
+              <p className={classes.subheader}>
+                Tools
+              </p>
+
+              <div className={classes.toolsWrapper}>
+                {props.project?.tools.map((tool) => (
+                  <Chip
+                    size="small"
+                    color="primary"
+                    label={tool}/>
+                ))}
+              </div>
+            </div>
+          }
         </DialogContent>
 
         <DialogActions>
