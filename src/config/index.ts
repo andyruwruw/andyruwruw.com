@@ -21,8 +21,6 @@ export const jobs = [
     end: 1598943600000,
     description: [
       'Designed and developed reusable components in Vue.js and PHP.',
-    ],
-    achievements: [
       'Completed refactor of frontend design for Puzzles and Four Player Chess.',
     ],
     topics: [
@@ -98,10 +96,11 @@ export const jobs = [
     start: 1525158000000,
     end: 1525158000000,
     description: [
-      'Hired to find drivers alone for the U.S. Open in New York.',
+      'Asked to find drivers for the U.S. Open in New York.',
+      'Found and hired 30 drivers licensed for paratransit.',
     ],
     achievements: [
-      'Found and hired 30 drivers in New York licensed for paratransit transit.',
+      
     ],
     topics: [
       'Human Resources',
@@ -182,7 +181,7 @@ export const projects: IProject[] = [
     github: 'https://github.com/andyruwruw/andyruwruw.com',
     description: [
       'Portfolio site, built with React.js and Typescript to show proficiency, as well as visually showcase examples of work.',
-      'Most of my work is done in Vue.js, and so a project like this is a great opporunity to use React.',
+      'Most of my work is done in Vue.js, so a project like this was a great opportunity to use React.',
       '90% of the visual appeal comes from some very fancy illustrations animated to appear 3D.'
     ],
     image: 'portfolio_site',
@@ -203,7 +202,7 @@ export const projects: IProject[] = [
     github: 'https://github.com/andyruwruw/boid-boogie',
     description: [
       'Flocking simulation that dynamically moves the boids with the user\'s music.',
-      'Utilizing Spotify\'s Web Playback SDK and API to retrieve playback point and music audio analaysis',
+      'Utilizing Spotify\'s Web Playback SDK and API to retrieve the user\'s playback and track audio analaysis',
       'Inspired by https://www.kaleidosync.com/visualizer',
     ],
     image: 'boid_boogie',
@@ -252,7 +251,7 @@ export const projects: IProject[] = [
     github: 'https://github.com/andyruwruw/enhanced-spotify-api',
     description: [
       'Object oriented Spotify API wrapper, providing developers with prototype classes for each of Spotify\'s data objects.',
-      'Lazy loading of data, minimal requests, and all of Spotify\'s API in some nifty classes with customization available',
+      'Lazy loading of data, minimal requests, and all of Spotify\'s API in some nifty classes, with easy customization',
       'By far my most downloaded npm package.',
     ],
     image: 'enhanced_spotify_api',
