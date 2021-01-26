@@ -1,5 +1,4 @@
 import React from 'react';
-import { Tooltip } from '@material-ui/core';
 import { Link } from "react-router-dom";
 
 import { projects, IProject } from '../../config/index';
@@ -28,7 +27,7 @@ export default function Projects() {
     <div className={classes.root}>
       <Link
         className={classes.back}
-        to="/">
+        to="/?page=projects">
         <img
           className={classes.backIcon}
           src={BackIcon}/>

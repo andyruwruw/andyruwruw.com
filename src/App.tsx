@@ -10,6 +10,7 @@ import AppBar from './components/ui/app-bar/AppBar';
 import Home from './scenes/Home/index';
 import Experience from './scenes/Experience/index';
 import Projects from './scenes/Projects/index';
+import Skills from './scenes/Skills/index';
 
 function App() {
   const prefersDarkMode = true;
@@ -61,6 +62,10 @@ function App() {
 
               <Route path="/projects">
                 <Projects />
+              </Route>
+
+              <Route path="/skills">
+                <Skills />
               </Route>
 
               <Route path="/">

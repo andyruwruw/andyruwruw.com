@@ -308,28 +308,6 @@ export const projects: IProject[] = [
     npm: 'chess-image-generator',
   },
   {
-    title: 'Blackmailer',
-    url: 'https://blackmailer.xyz',
-    github: 'https://github.com/cyficowley/blackmail',
-    description: [
-      'Allows users to blackmail themselves into completing goals.',
-      'Describe your goal, upload blackmail, and the email of the worst person it could be sent to.',
-      'Submit proof of completion before your self set deadline, or get blackmailed.',
-    ],
-    topics: [
-      'Gimmick',
-    ],
-    image: 'blackmailer',
-    tools: [
-      'Firebase',
-      'Vue.js',
-      'Vuetify',
-    ],
-    start: 1591686000000,
-    end: 0,
-    npm: null,
-  },
-  {
     title: 'Melophile',
     url: '',
     github: 'https://github.com/MelophileOrg',
@@ -381,6 +359,28 @@ export const projects: IProject[] = [
     npm: null,
   },
   {
+    title: 'Blackmailer',
+    url: 'https://blackmailer.xyz',
+    github: 'https://github.com/cyficowley/blackmail',
+    description: [
+      'Allows users to blackmail themselves into completing goals.',
+      'Describe your goal, upload blackmail, and the email of the worst person it could be sent to.',
+      'Submit proof of completion before your self set deadline, or get blackmailed.',
+    ],
+    topics: [
+      'Gimmick',
+    ],
+    image: 'blackmailer',
+    tools: [
+      'Firebase',
+      'Vue.js',
+      'Vuetify',
+    ],
+    start: 1591686000000,
+    end: 0,
+    npm: null,
+  },
+  {
     title: 'Countdown Timer',
     url: 'https://countdown-timer-app.vercel.app/',
     github: 'https://github.com/andyruwruw/countdown-timer',
@@ -405,7 +405,14 @@ export const projects: IProject[] = [
   },
 ];
 
-export const SKILLS = [
+export interface ISkill {
+  title: string,
+  proficiency: number,
+  topic: string[],
+  icon?: string,
+}
+
+export const skills: ISkill[] = [
   {
     title: 'Vue.js',
     proficiency: 10,
@@ -414,6 +421,7 @@ export const SKILLS = [
       'Frontend',
       'Coding',
     ],
+    icon: 'vue',
   },
   {
     title: 'React.js',
@@ -423,6 +431,7 @@ export const SKILLS = [
       'Frontend',
       'Coding',
     ],
+    icon: 'react',
   },
   {
     title: 'Typescript',
@@ -432,6 +441,7 @@ export const SKILLS = [
       'Frontend',
       'Coding',
     ],
+    icon: 'typescript',
   },
   {
     title: 'Jest.js',

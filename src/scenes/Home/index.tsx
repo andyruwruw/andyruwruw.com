@@ -75,12 +75,31 @@ class Home extends React.Component<HomeProps, HomeState> {
   }
 
   componentDidMount() {
+    if (this.props.location.search && window) {
+      switch (this.props.location.search.split('=')[1]) {
+        case 'work': {
+          document.getElementById('work-section')?.scrollIntoView();
+          break;
+        }
+        case 'projects': {
+          document.getElementById('projects-section')?.scrollIntoView();
+          break;
+        }
+        case 'skills': {
+          document.getElementById('skills-section')?.scrollIntoView();
+          break;
+        }
+      }
+    }
+
     this.bindScrollSnap();
   }
 
   render() {
     return (
-      <div className={this.props.classes.root}>
+      <div
+        id="main-home-body"
+        className={this.props.classes.root}>
         <ScrollGuide shown={this.state.shown} />
 
         <div

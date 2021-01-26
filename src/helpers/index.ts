@@ -7,7 +7,6 @@ export function getDate(time: number) {
 
 export class ScrollHelper {
   static scrollTo(element: any, delay: number | undefined | null = null, behavior: 'smooth' | 'auto' | undefined = 'smooth') {
-    console.log(element);
     if (typeof window === 'undefined') {
       return;
     }

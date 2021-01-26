@@ -63,7 +63,7 @@ export default function Experience() {
     <div className={classes.root}>
       <Link
         className={classes.back}
-        to="/">
+        to="/?page=work">
         <img
           className={classes.backIcon}
           src={BackIcon}/>

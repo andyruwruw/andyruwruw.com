@@ -21,6 +21,7 @@ export default function Work(props: SectionProps) {
 
   return (
     <div
+      id="work-section"
       ref={ref}
       className={classes.root}>
       <div className={classes.wrapper}>

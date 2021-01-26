@@ -21,6 +21,7 @@ export default function Projects(props: SectionProps) {
 
   return (
     <div
+      id="projects-section"
       ref={ref}
       className={classes.root}>
       <div className={classes.wrapper}>

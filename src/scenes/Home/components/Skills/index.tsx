@@ -21,6 +21,7 @@ export default function Skills(props: SectionProps) {
 
   return (
     <div
+      id="skills-section"
       ref={ref}
       className={classes.root}>
       <div className={classes.wrapper}>
@@ -33,7 +34,11 @@ export default function Skills(props: SectionProps) {
             <Divider />
 
             <h2 className={classes.subTitle}>
-              here's what I can do!
+              i'm a vue.js fanboy,
+            </h2>
+
+            <h2 className={classes.subTitle}>
+              but i do some other stuff too.
             </h2>
 
             <button className={classes.button}>
