@@ -336,7 +336,7 @@ export const projects: IProject[] = [
     description: [
       'Application for providing insight into your unique music taste by analayzing your library using Spotify\'s API.',
       'Sharing and making your profile public allows users to discover new music through the best of other\'s libraries.',
-      'By far my most ambitious project to date, with the scope of the project constantly expanding.',
+      'My own obsession with music pushes this to be my most ambitious project to date, with the scope of the project constantly expanding.',
       'For more information, see the README.md at MelophileOrg/melophile.',
     ],
     topics: [
@@ -350,8 +350,33 @@ export const projects: IProject[] = [
       'MongoDB',
       'Spotify API',
       'Typescript',
+      'Chart.js',
     ],
     start: 1568962800000,
+    end: 0,
+    npm: null,
+  },
+  {
+    title: 'melophile-ui',
+    url: '',
+    github: 'https://github.com/MelophileOrg',
+    description: [
+      'With the scope of Melophile expanding, I\'ve had to part with Vuetify.js, my favorite component library, in favor of a custom made library that suites my needs.',
+      'melophile-ui will contain all the reusable Vue.js components, written in Typescript, that Melophile utilizes.',
+      'The repo is made private due to the use of licensed designs.',
+    ],
+    topics: [
+      'Component Library',
+    ],
+    image: 'melophile_ui',
+    tools: [
+      'Rollup.js',
+      'Vue.js',
+      'Typescript',
+      'Storybook.js',
+      'Chart.js',
+    ],
+    start: 1578384000000,
     end: 0,
     npm: null,
   },
