@@ -11,7 +11,7 @@ export interface IJob {
   link?: string,
 }
 
-export const jobs = [
+export const jobs: Array<IJob> = [
   {
     title: 'Frontend Developer Intern',
     link: 'https://www.chess.com/',
@@ -23,6 +23,7 @@ export const jobs = [
       'Designed and developed reusable components in Vue.js and PHP.',
       'Completed refactor of frontend design for Puzzles and Four Player Chess.',
     ],
+    achievements: [],
     topics: [
       'Vue.js',
       'Web Development',
@@ -326,6 +327,29 @@ export const projects: IProject[] = [
     ],
     start: 1591686000000,
     end: 0,
+    npm: null,
+  },
+  {
+    title: 'Countdown Timer',
+    url: 'https://countdown-timer-app.vercel.app/',
+    github: 'https://github.com/andyruwruw/countdown-timer',
+    description: [
+      'Minimalist timer displaying the time remaining you have until your next Google calendar event or until a current event expires.',
+      'An older project, but one I still use to this day.',
+    ],
+    topics: [
+      'Productivity',
+    ],
+    image: 'countdown_timer',
+    tools: [
+      'Vue.js',
+      'Google API',
+      'P5.js',
+      'Vercel Serverless',
+      'Vuetify',
+    ],
+    start: 1566630000000,
+    end: 1567839600000,
     npm: null,
   },
   {

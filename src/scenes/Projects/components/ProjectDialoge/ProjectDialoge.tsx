@@ -9,7 +9,7 @@ import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/s
 import Chip from '@material-ui/core/Chip';
 import axios from 'axios';
 
-import { IProject, projects } from '../../../../config/index';
+import { IProject } from '../../../../config/index';
 
 import useStyles from './styles';
 
@@ -90,9 +90,7 @@ export default function ProjectDialoge(props: ProjectDialogeProps) {
   const [npmName, setNpmName] = useState('');
 
   useEffect(() => {
-    console.log('testing')
     if (props.project?.npm && props.project?.npm !== npmName && downloads === -1) {
-      console.log('running')
       getDownloads(props.project?.npm);
     }
   }, []);
@@ -104,7 +102,6 @@ export default function ProjectDialoge(props: ProjectDialogeProps) {
   };
 
   const getDownloads = async (name: string) => {
-    console.log('getting')
     const { data } = await axios.get(`https://api.npmjs.org/downloads/point/1970-01-01:2038-01-19/${name}`);
     setDownloads(data.downloads);
     setNpmName(name);
@@ -124,6 +121,14 @@ export default function ProjectDialoge(props: ProjectDialogeProps) {
           id="customized-dialog-title"
           onClose={props.handleClose}>
           { props.project?.title }
+
+          {props.project?.end === 0 &&
+            <Chip
+              className={classes.wip}
+              size="medium"
+              color="primary"
+              label="Work in Progress"/>
+          }
         </DialogTitle>
 
         <DialogContent dividers>

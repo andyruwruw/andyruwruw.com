@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme: Theme) =>
     description: {
       fontSize: '1.8rem',
     },
+    wip: {
+      marginLeft: '1.6rem',
+    },
     button: {
       fontSize: '1.6rem',
       padding: '.8rem 1.7rem',
