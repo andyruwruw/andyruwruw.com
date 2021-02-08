@@ -16,6 +16,14 @@
   Portfolio site for professional purposes.
 </p>
 
+<p align="center">
+  <a href="https://andyruwruw.com/">Visit Site</a>
+  ·
+  <a href="https://www.linkedin.com/in/andrew-young-3322b3133/">LinkedIn</a>
+  ·
+  <a href="https://github.com/andyruwruw">Github</a>
+</p>
+
 
 # How it's Made
 
@@ -27,9 +35,7 @@ This project was made using [React](https://reactjs.org/) and [Typescript](https
 
 The images were purchased from [craftwork.design](https://craftwork.design/)! They have some pretty solid sets.
 
-I organized the graphics by layers and converted it from the Adobe Illustrator files they came as into SVGs, from there it was just a matter of animating the separate layers.
-
-The graphics can be found in src/assets/graphics as React components.
+The illustrations were provided in multiple formats, including Adobe Illustrator files. I separated the graphics into the layers, and rendered them as a SVG. From there it was just a matter of animating the separate layers.
 
 ### Tilt and Scroll
 
