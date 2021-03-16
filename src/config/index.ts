@@ -181,7 +181,7 @@ export const projects: IProject[] = [
     url: 'https://andyruwruw.com',
     github: 'https://github.com/andyruwruw/andyruwruw.com',
     description: [
-      'Portfolio site, built with React.js and Typescript to show proficiency, as well as visually showcase examples of work.',
+      'Portfolio site, built with React.js and Typescript to demonstrate proficiency, as well as visually showcase examples of work.',
       'Most of my work is done in Vue.js, so a project like this was a great opportunity to use React.',
       '90% of the visual appeal comes from some very fancy illustrations animated to appear 3D.'
     ],
@@ -244,6 +244,28 @@ export const projects: IProject[] = [
     ],
     start: 1595660400000,
     end: 1596006000000,
+    npm: null,
+  },
+  {
+    title: 'Stardew Valley Mod: WaterBot',
+    url: 'https://www.nexusmods.com/stardewvalley/mods/8167',
+    github: 'https://github.com/andyruwruw/stardew-valley-water-bot',
+    description: [
+      'WaterBot is a Stardew Valley mod that helps you water your crops while staying as vanilla as possible.',
+      'When you right-click a not fully grown plant with your Watering Can, the bot will take control of your character, watering all your crops and refilling the water can at the nearest water source whenever necessary.',
+      'The bot uses a variety of algorithms to find the best path through your crops, including depth-first, breadth-first, A* searches and TSP greedy.',
+    ],
+    topics: [
+      'Stardew Valley',
+      'Game Mods'
+    ],
+    image: 'water_bot',
+    tools: [
+      '.Net Framework',
+      'SMAPI',
+    ],
+    start: 1613721600000,
+    end: 1614326400000,
     npm: null,
   },
   {
