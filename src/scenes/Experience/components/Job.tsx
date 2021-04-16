@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Divider from '../../../components/ui/divider/Divider';
-import { IJob, jobs } from '../../../config/index';
+import { IJob } from '../../../config/jobs';
 import { getDate } from '../../../helpers/index';
 import useStyles from './style';
 
@@ -38,7 +38,7 @@ export default function Job(props: JobProps) {
       </a>
 
       <p className={classes.date}>
-        {getDate(props.job.start)} - {getDate(props.job.end)}
+        {getDate(props.job.start)} - {props.job.end < (new Date()).getTime() ? getDate(props.job.end) : 'Current'}
       </p>
 
       <Divider

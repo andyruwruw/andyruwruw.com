@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme: Theme) =>
       textDecoration: 'none',
       fontFamily: '\'Josefin Sans\', sans-serif',
       lineHeight: '40px',
+      [theme.breakpoints.between('xs', 625)]: {
+        fontSize: '1.5rem',
+        lineHeight: '30px',
+      },
     },
     spotifyLink: {
       [theme.breakpoints.between('xs', 625)]: {
@@ -33,6 +37,10 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '4rem',
       height: '4rem',
       marginLeft: '2rem',
+      [theme.breakpoints.between('xs', 625)]: {
+        width: '2.5rem',
+        height: '2.5rem',
+      },
     },
     toolBar: {
       display: 'flex',

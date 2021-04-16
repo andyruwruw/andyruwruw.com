@@ -1,12 +1,11 @@
 import React from 'react';
-import { Tooltip } from '@material-ui/core';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import { IJob, jobs } from '../../config/index';
+import { jobs, IJob } from '../../config/index';
 import Job from './components/Job';
 import BackIcon from '../../assets/icons/back.svg';
 
@@ -66,7 +65,8 @@ export default function Experience() {
         to="/?page=work">
         <img
           className={classes.backIcon}
-          src={BackIcon}/>
+          src={BackIcon}
+          alt="Back Button" />
       </Link>
 
       <div className={classes.headerWrapper}>

@@ -34,7 +34,7 @@ export default function Work(props: SectionProps) {
             <Divider />
 
             <h2 className={classes.subTitle}>
-              frontend developer for chess.com
+              frontend dev intern for chess.com
             </h2>
 
             <h2 className={classes.subTitleSecond}>

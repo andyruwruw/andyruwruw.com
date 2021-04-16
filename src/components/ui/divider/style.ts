@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       '--delay': 0,
       padding: '1rem .5rem',
+      [theme.breakpoints.down(1200)]: {
+        display: 'none',
+      },
     },
     line: {
       display: 'block',

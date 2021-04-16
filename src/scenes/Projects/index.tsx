@@ -30,7 +30,8 @@ export default function Projects() {
         to="/?page=projects">
         <img
           className={classes.backIcon}
-          src={BackIcon}/>
+          src={BackIcon}
+          alt="Back Button" />
       </Link>
 
       <div className={classes.headerWrapper}>

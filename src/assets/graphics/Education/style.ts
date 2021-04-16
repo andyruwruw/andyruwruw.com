@@ -4,13 +4,11 @@ import {
   Theme,
 } from '@material-ui/core/styles';
 
+import { parallax } from '../styles';
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    parallax: {
-      pointerEvents: 'none',
-      transformStyle: 'preserve-3d',
-      position: 'relative',
-    },
+    parallax: parallax(theme),
     svg: {
       position: 'absolute',
     },
