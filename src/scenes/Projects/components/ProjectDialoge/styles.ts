@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: '0',
     },
     description: {
-      fontSize: '1.8rem',
+      fontSize: '1.5rem',
     },
     wip: {
       marginLeft: '1.6rem',
@@ -38,18 +38,22 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundPosition: 'center center',
     },
     subheader: {
-      fontSize: '1.8rem',
+      fontSize: '1.5rem',
       color: '#ffffff60',
       textTransform: 'uppercase',
       fontWeight: 500,
-      margin: '1rem .5rem .5rem',
+      margin: '2rem 0rem .5rem',
     },
     toolsWrapper: {
       display: 'flex',
       flexWrap: 'wrap',
       '& > *': {
-        margin: theme.spacing(0.5),
+        marginRight: theme.spacing(1),
+        marginBottom: theme.spacing(1),
       },
+    },
+    tools: {
+      fontSize: '.2rem !important',
     },
     link: {
       color: '#ffffff',

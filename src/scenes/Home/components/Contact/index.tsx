@@ -34,10 +34,6 @@ export default function Education(props: SectionProps) {
             <h2 className={classes.subTitle}>
               andrew@youngshome.com
             </h2>
-
-            <h2 className={classes.subTitleSecond}>
-              650 999 1673
-            </h2>
           </div>
         }
 

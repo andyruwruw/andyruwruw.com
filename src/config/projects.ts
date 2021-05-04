@@ -182,8 +182,8 @@ const projects: IProject[] = [
     image: 'melophile',
     tools: [
       'Vue.js',
-      'Nuxt.js',
-      'Web Sockets',
+      'Terraform',
+      'AWS Lambda & SQS',
       'MongoDB',
       'Spotify API',
       'Typescript',

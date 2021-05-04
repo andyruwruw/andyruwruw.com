@@ -26,7 +26,8 @@ const styles = (theme: Theme) =>
       color: theme.palette.grey[500],
     },
     title: {
-      margin: '0',
+      margin: '0 0 0 .8rem',
+      fontSize: '2rem',
     },
   });
 
@@ -156,7 +157,7 @@ export default function ProjectDialoge(props: ProjectDialogeProps) {
                 {props.project?.topics.sort().map((topics) => (
                   <Chip
                     key={`${props.project?.title}-topic-${topics}`}
-                    size="medium"
+                    size="small"
                     color="primary"
                     label={topics}/>
                 ))}
@@ -174,8 +175,9 @@ export default function ProjectDialoge(props: ProjectDialogeProps) {
                 {props.project?.tools.sort().map((tool) => (
                   <Chip
                     key={`${props.project?.title}-tool-${tool}`}
-                    size="medium"
+                    size="small"
                     color="primary"
+                    className={classes.tools}
                     label={tool}/>
                 ))}
               </div>

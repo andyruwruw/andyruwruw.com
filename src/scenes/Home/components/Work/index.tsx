@@ -34,11 +34,11 @@ export default function Work(props: SectionProps) {
             <Divider />
 
             <h2 className={classes.subTitle}>
-              frontend dev intern for chess.com
+              software engineer intern - adobe
             </h2>
 
             <h2 className={classes.subTitleSecond}>
-              web development teacher's assistant
+              frontend dev intern - chess.com
             </h2>
 
             <button className={classes.button}>
