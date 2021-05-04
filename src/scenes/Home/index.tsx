@@ -142,7 +142,7 @@ const styles = createStyles({
   },
   wrapper: {
     alignItems: 'center',
-    display: 'flex',
+    display: 'block',
     flexDirection: 'column',
     height: '100%',
     overflow: 'auto',
