@@ -13,6 +13,27 @@ export interface IProject {
 
 const projects: IProject[] = [
   {
+    title: 'password-encrypter',
+    url: 'https://password-encrypter.vercel.app/',
+    github: 'https://github.com/andyruwruw/password-encrypter',
+    description: [
+      'password-encrypter takes a base, secondary, integer and skull key to generate a password hashed from a combination of those four parameters. The intent is to store and maintain a different base, secondary, integer for every account and use this app to find the password.',
+      'I\'ve been using algorithm generated passwords for a while now, but have always wanted a more secure system that used hashing.',
+    ],
+    image: 'password_encrypter',
+    topics: [
+      'Security',
+      'Utilities',
+    ],
+    tools: [
+      'Vue.js',
+      'Typescript',
+    ],
+    start: 1622530800000,
+    end: 1622876400000,
+    npm: null,
+  },
+  {
     title: 'Portfolio Site',
     url: 'https://andyruwruw.com',
     github: 'https://github.com/andyruwruw/andyruwruw.com',
@@ -248,7 +269,7 @@ const projects: IProject[] = [
       'An older project, but one I still use to this day.',
     ],
     topics: [
-      'Productivity',
+      'Utilities',
     ],
     image: 'countdown_timer',
     tools: [
