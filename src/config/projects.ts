@@ -257,7 +257,7 @@ const projects: IProject[] = [
       'Vuetify',
     ],
     start: 1591686000000,
-    end: 0,
+    end: 1593586800000,
     npm: null,
   },
   {
