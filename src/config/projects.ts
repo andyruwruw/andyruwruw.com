@@ -13,6 +13,30 @@ export interface IProject {
 
 const projects: IProject[] = [
   {
+    title: 'Spotify Cartography',
+    url: 'https://spotify-cartography.vercel.app/',
+    github: 'https://github.com/andyruwruw/spotify-cartography',
+    description: [
+      'Spotify Cartography groups simular songs together based on their happiness, energy, danceability and six other variables using an algorithm called t-distributed stochastic neighbor embedding (t-SNE).',
+      'The songs are then displayed in a 3D space using Three.js, allowing you to fly around and explore.',
+      '1st place winner for Oregon State Beaverhacks Winter 2022!',
+    ],
+    image: 'spotify_cartography',
+    topics: [
+      'Spotify',
+    ],
+    tools: [
+      'Vue.js',
+      'Three.js',
+      't-SNE',
+      'Spotify API',
+      'Spotify Playback SDK',
+    ],
+    start: 1641456000000,
+    end: 1642406400000,
+    npm: null,
+  },
+  {
     title: 'password-encrypter',
     url: 'https://password-encrypter.vercel.app/',
     github: 'https://github.com/andyruwruw/password-encrypter',
@@ -34,7 +58,7 @@ const projects: IProject[] = [
     npm: null,
   },
   {
-    title: 'Portfolio Site',
+    title: 'andyruwruw.com',
     url: 'https://andyruwruw.com',
     github: 'https://github.com/andyruwruw/andyruwruw.com',
     description: [
