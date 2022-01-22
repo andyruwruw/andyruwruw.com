@@ -36,7 +36,7 @@ export default function Education(props: SectionProps) {
             </h2>
 
             <h2 className={classes.subTitleSecond}>
-              brigham young university
+              oregon state university
             </h2>
           </div>
         }
